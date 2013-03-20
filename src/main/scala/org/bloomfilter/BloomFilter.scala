@@ -3,7 +3,8 @@ package org.bloomfilter
 import scala.math._
 
 /**
- * An implementation of the Bloom Filter algorithm (http://en.wikipedia.org/wiki/Bloom_filter)
+ * An implementation of the Bloom Filter algorithm
+ * (http://en.wikipedia.org/wiki/Bloom_filter)
  */
 class BloomFilter(val size: Int, val expectedElements: Int) {
   require(size > 0)
