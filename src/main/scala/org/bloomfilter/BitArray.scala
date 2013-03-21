@@ -5,8 +5,8 @@ class BitArray(bits: Int) {
   require(isPowerOf2(size))
   val data = new Array[Long](size >> 6)
 
-  def set(index: Int) = data(idx(index)) |= (1L << index)
-  def get(index: Int) = (data(idx(index)) & (1L << index)) != 0
+  def set(index: Int) :Unit = data(idx(index)) |= (1L << index)
+  def get(index: Int) :Boolean = (data(idx(index)) & (1L << index)) != 0
 
   private val mask = size - 1
   private def idx(index: Int) = (index & mask) >> 6

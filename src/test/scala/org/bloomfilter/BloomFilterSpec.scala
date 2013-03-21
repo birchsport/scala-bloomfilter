@@ -14,8 +14,9 @@ class BloomFilterSpec extends FlatSpec with ShouldMatchers {
       i = i + 1;
       if (i % 2 == 0) {
         filter.add(line.hashCode)
-      } else
+      } else {
         filter.add(line)
+      }
     }
     filter.contains("foo".hashCode) should equal(true)
     filter.contains("foo") should equal(true)
